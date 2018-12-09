@@ -1,0 +1,31 @@
+{% extends "index/layout.html" %}
+
+{% block title %}Viwp · 404{% endblock title %}
+
+{% block meta %}
+  {{ super() }}
+  <meta name="description" content="[404 Not Found] - Nothing matches the given URI">
+{% endblock meta %}
+
+{% block styles %}
+  {{ super() }}
+  <style>
+   .error-template {padding: 40px 15px;text-align: center;}
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="error-template">
+          <h1>Hi!</h1>
+          <h2>404 Not Found</h2>
+          <div class="error-details">
+            Sorry, an error has occured, Requested page not found!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
