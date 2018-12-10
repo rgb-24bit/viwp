@@ -8,8 +8,9 @@ name = "pypi"
 [packages]
 
 flask = "*"
+redis = "*"
+flask-caching = "*"
 
 
 [dev-packages]
-
 
