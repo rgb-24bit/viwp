@@ -27,4 +27,7 @@ def create_app(config_name):
     from .views import index as index_blueprint
     app.register_blueprint(index_blueprint)
 
+    from .views import randstar as randstar_blueprint
+    app.register_blueprint(randstar_blueprint, url_prefix='/randstar')
+
     return app

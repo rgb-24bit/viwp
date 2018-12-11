@@ -9,3 +9,4 @@ Different views will be completed in this package
 """
 
 from app.views.index import index
+from app.views.randstar import randstar

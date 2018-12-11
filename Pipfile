@@ -10,6 +10,7 @@ name = "pypi"
 flask = "*"
 redis = "*"
 flask-caching = "*"
+requests = "*"
 
 
 [dev-packages]
