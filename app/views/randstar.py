@@ -50,7 +50,7 @@ def randstar_search():
     return render_template('randstar/search.html')
 
 
-@randstar.route('/<user>/')
+@randstar.route('/user/<user>/')
 def randstar_user(user):
     return render_template('randstar/user.html')
 
