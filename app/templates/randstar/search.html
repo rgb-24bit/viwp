@@ -1,1 +1,42 @@
+{% extends "randstar/layout.html" %}
 
+{% block title %}Viwp · Randstar{% endblock title %}
+
+{% block meta %}
+  {{ super() }}
+  <meta name="description" content="Randomly show the repository of interest on github.">
+{% endblock meta %}
+
+{% block styles %}
+  {{ super() }}
+  <style>
+   input {
+       height: 40px;
+       font-size: 18px;
+       padding: 0 15px;
+       border: 1;
+   }
+  </style>
+{% endblock %}
+
+{% block main %}
+  <div>
+    <h2>Input your github account name</h2>
+    <form onsubmit="return formSubmit();">
+      <input type="text" name="accountName" placeholder="tony" required="required">
+      <br/>
+      <input type="submit" style="display:none">
+    </form>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+   document.querySelector("input").focus();
+
+   function formSubmit() {
+       window.location = '/randstar/user/' + document.querySelector("input").value;
+       return false;
+   }
+  </script>
+{% endblock %}

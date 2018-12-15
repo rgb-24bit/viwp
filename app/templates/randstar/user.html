@@ -1,0 +1,21 @@
+{% extends "randstar/layout.html" %}
+
+{% block title %}Viwp · Randstar{% endblock title %}
+
+{% block meta %}
+  {{ super() }}
+  <meta name="description" content="Randomly show the repository of interest on github.">
+{% endblock meta %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="/static/randstar/randstar.css">
+{% endblock %}
+
+{% block header %}
+  <div id="loader" class="bouncing-loader">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+{% endblock %}
