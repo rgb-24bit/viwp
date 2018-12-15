@@ -7,15 +7,22 @@
   <meta name="description" content="[500 Internal Server Error] - Server got itself in trouble">
 {% endblock meta %}
 
-{% block content %}
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="error-template">
-          <h1>Hi!</h1>
-          <h2>500 Internal Server Error</h2>
-        </div>
-      </div>
+{% block styles %}
+  {{ super() }}
+  <style>
+   .error-template {
+       padding: 40px 15px;
+       text-align: center;
+   }
+  </style>
+{% endblock %}
+
+{% block main %}
+  <div class="error-template">
+    <h1>Hi!</h1>
+    <h2>500 Internal Server Error</h2>
+    <div>
+      Sorry, an error occurred inside the server, please wait and try again!
     </div>
   </div>
-{% endblock content %}
+{% endblock %}
