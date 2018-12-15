@@ -6,3 +6,26 @@
   {{ super() }}
   <meta name="description" content="View in web page.">
 {% endblock meta %}
+
+{% block styles %}
+  {{ super() }}
+  <!-- index style -->
+  <link rel="stylesheet" href="/static/index/index.css">
+{% endblock %}
+
+{% block header %}
+  <h1 class="header-text">
+    Viwp - View in web page!
+  </h1>
+{% endblock %}
+
+{% block main %}
+  <div class="container">
+    <ul>
+      <li>
+        <b>Randstar</b> - Randomly show the repository of interest on github.
+        <a class="nav-link" href="/randstar/search/">[link]</a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}
