@@ -9,8 +9,14 @@
 
 {% block styles %}
   {{ super() }}
-  <!-- index style -->
-  <link rel="stylesheet" href="/static/index/index.css">
+  <style>
+   .container {
+       text-align: left;
+   }
+   .nav-link {
+       color: #e81c4f;
+   }
+  </style>
 {% endblock %}
 
 {% block header %}
