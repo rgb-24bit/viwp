@@ -35,30 +35,13 @@ const generateTemplateString = (function() {
 })();
 
 /**
- * Find a template in the dom tree based on the specified name.
- *
- * Note:
- *     If there are multiple matches, then the first match is returned.
- *     If there is no match, then it returns null.
- */
-const findTemplateByName = function(name) {
-  let template = document.querySelectorAll(`.template.${name}`);
-
-  if (template.length > 0) {
-    return generateTemplateString(template[0].innerHTML);
-  }
-
-  return null;
-};
-
-/**
- * Find a template in the dom tree based on the specified id.
+ * Use `document.querySelector` to find a template in the dom tree.
  *
  * Note:
  *     If there is no match, then it returns null.
  */
-const findTemplateById = function(id) {
-  let template = document.querySelector(`#${id}`);
+const templateQuerySelector = function(selectors) {
+  let template = document.querySelector(selectors);
 
   if (template) {
     return generateTemplateString(template.innerHTML);
