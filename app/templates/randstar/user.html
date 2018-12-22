@@ -19,3 +19,43 @@
     <div></div>
   </div>
 {% endblock %}
+
+{% block main %}
+  <div id="container" class="container">
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Language</th>
+          <th>Star</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+  <!-- /.container -->
+
+  <!-- template saved in dom tree -->
+  <div style="display:none">
+    <table>
+      <!-- table item template -->
+      <tbody id="itemTemplate">
+        <tr>
+          <td><a href="${html_url}">${full_name}</a></td>
+          <td>${description}</td>
+          <td>${language}</td>
+          <td>${stargazers_count}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- /div -->
+
+{% endblock %}
+
+{% block scripts %}
+  <script src="/static/common/js/template.js"></script>
+  <script src="/static/common/js/utils.js"></script>
+  <script src="/static/randstar/randstar.js"></script>
+{% endblock %}
