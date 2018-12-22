@@ -2,11 +2,12 @@ function showRandStar(data) {
   let tbody = document.querySelector("#tableBody");
   let itemTemplate = templateQuerySelector('#itemTemplate');
 
-  for (let url of data) {
-    getJSON(url, function(data) {
-      tbody.append(asHTML(itemTemplate(data)));
-    });
+  for (let repo of data) {
+    tbody.innerHTML += itemTemplate(repo);
   }
+
+  hideElement(document.querySelector("#loader"));
+  showElement(document.querySelector("#table"));
 }
 
 window.onload = function() {

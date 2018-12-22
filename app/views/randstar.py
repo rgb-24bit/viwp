@@ -38,7 +38,7 @@ def get_user_starred(user):
             return []
 
         if response.json():
-            starred.extend(map(lambda x: x['url'], response.json()))
+            starred.extend(response.json())
             page += 1
         else:
             page = -1
