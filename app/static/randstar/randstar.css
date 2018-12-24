@@ -1,5 +1,5 @@
 @keyframes bouncing-loader {
- to {
+to {
     opacity: 0.1;
     transform: translate3d(0, -1rem, 0);
   }
@@ -25,4 +25,66 @@
 
 .bouncing-loader > div:nth-child(3) {
   animation-delay: 0.4s;
+}
+
+table {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+table * {
+  position: relative;
+}
+
+table td, table th {
+  padding: 8px;
+}
+
+table thead tr {
+  background: #ecf;
+  height: 60px;
+}
+
+table tbody tr {
+  height: 50px;
+}
+
+table td, table th {
+  text-align: left;
+}
+
+table td.l, table th.l {
+  text-align: right;
+}
+
+table td.c, table th.c {
+  text-align: center;
+}
+
+table td.r, table th.r {
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+tbody tr {
+  font-size: 15px;
+  font-weight: unset;
+  color: #808080;
+  line-height: 1.2;
+}
+
+tbody tr:hover {
+  color: #555555;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+a {
+  color: #e81c4f;
 }

@@ -58,4 +58,4 @@ def randstar_user(user):
 @randstar.route('/api/<user>')
 def randstar_api_user(user):
     user_starred = get_user_starred(user)
-    return jsonify(random.choices(user_starred, k=6))
+    return jsonify(random.choices(user_starred, k=8))
