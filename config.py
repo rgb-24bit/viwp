@@ -21,10 +21,10 @@ class DevelopmentConfig(Config):
     # https://flask-caching.readthedocs.io/en/latest/#rediscache
     # https://flask-caching.readthedocs.io/en/latest/#configuring-flask-caching
     CACHE_TYPE = 'redis'
-    CACHE_KEY_PREFIX = 'viwp'
-    CACHE_REDIS_HOST = ''
-    CACHE_REDIS_PORT = 6739
-    CACHE_REDIS_PASSWORD = ''
+    CACHE_KEY_PREFIX = 'viwp/'
+    CACHE_REDIS_HOST = '127.0.0.1'
+    CACHE_REDIS_PORT = 6379
+    # CACHE_REDIS_PASSWORD = ''
     CACHE_REDIS_DB = 1
 
 class TestingConfig(Config):
