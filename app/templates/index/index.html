@@ -11,25 +11,18 @@
   {{ super() }}
   <style>
    body {
-       text-align: center;
-   }
-   .container {
-       text-align: left;
+     padding: 40px;
+     text-align: left;
    }
    .nav-link {
-       color: #e81c4f;
+     color: #e81c4f;
    }
   </style>
 {% endblock %}
 
-{% block header %}
-  <h1 class="header-text">
-    Viwp - View in web page!
-  </h1>
-{% endblock %}
-
 {% block main %}
   <div class="container">
+    <p><b>Views:</b></p>
     <ul>
       <li>
         <b>Randstar</b> - Randomly show the repository of interest on github.

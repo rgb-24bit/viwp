@@ -11,13 +11,14 @@
   {{ super() }}
   <style>
    body {
-       text-align: center;
+     padding: 40px;
+     text-align: center;
    }
    input {
-       height: 40px;
-       font-size: 18px;
-       padding: 0 15px;
-       border: 1;
+     height: 40px;
+     font-size: 18px;
+     padding: 0 15px;
+     border: 1;
    }
   </style>
 {% endblock %}
@@ -26,7 +27,7 @@
   <div>
     <h2>Input your github account name</h2>
     <form onsubmit="return formSubmit();">
-      <input type="text" name="accountName" placeholder="tony" required="required">
+      <input type="text" name="accountName" placeholder="e.g. tony" required>
       <br/>
       <input type="submit" style="display:none">
     </form>
@@ -38,8 +39,8 @@
    document.querySelector("input").focus();
 
    function formSubmit() {
-       window.location = '/randstar/user/' + document.querySelector("input").value;
-       return false;
+     window.location = '/randstar/user/' + document.querySelector("input").value;
+     return false;
    }
   </script>
 {% endblock %}
