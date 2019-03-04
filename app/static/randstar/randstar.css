@@ -2,8 +2,8 @@ body {
   padding-top: 40px;
 }
 
-@keyframes bouncing-loader {t
-o {
+@keyframes bouncing-loader {
+  to {
     opacity: 0.1;
     transform: translate3d(0, -1rem, 0);
   }
