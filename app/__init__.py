@@ -30,4 +30,7 @@ def create_app(config_name):
     from .views import randstar as randstar_blueprint
     app.register_blueprint(randstar_blueprint, url_prefix='/randstar')
 
+    from .views import plain as plain_blueprint
+    app.register_blueprint(plain_blueprint, url_prefix='/plain')
+
     return app
