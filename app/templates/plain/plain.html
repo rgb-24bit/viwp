@@ -1,0 +1,53 @@
+{% extends "plain/layout.html" %}
+
+
+{% block title %}Viwp · Plain{% endblock %}
+
+{% block meta %}
+  {{ super() }}
+  <meta name="description" content="Display a view of the content in plain text.">
+{% endblock meta %}
+
+{% block styles %}
+  {{ super() }}
+  <style>
+   body {
+     padding: 40px;
+     text-align: left;
+   }
+   code,
+   pre {
+     background: #eee;
+   }
+   code {
+     padding: 2px 4px;
+     vertical-align: text-bottom;
+   }
+   pre {
+     padding: 1em;
+   }
+  </style>
+{% endblock %}
+
+{% block main %}
+  <div class="container">
+    <p>
+      <b>Display a view of the content in plain text:</b>
+    </p>
+    <ul>
+      <li>
+        <p>
+          <b>Timep</b> - Get the time schedule of day, week, month, year.
+        </p>
+        <pre>
+$ curl /plain/timep/[all, year, month, week, day]
+
+Year : [>>>>>>>>------------------------------------------]17.81%
+Month: [>>>>>>>>>-----------------------------------------]19.35%
+Week : [>>>>>>>>>>>>>>>>>>>>>-----------------------------]42.86%
+Day  : [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>--------------------]61.53%
+        </pre>
+      </li>
+    </ul>
+  </div>
+{% endblock %}

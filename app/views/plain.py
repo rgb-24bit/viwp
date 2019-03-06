@@ -11,7 +11,7 @@ Display a view of the content in plain text
 import calendar
 import datetime
 
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 
 plain = Blueprint('plain', __name__)
@@ -57,6 +57,11 @@ class Timep(object):
     def for_day(self):
         curr = self.now.hour * 60 + self.now.minute
         return self._build_progress_bar('Day', curr, 24 * 60)
+
+
+@plain.route('/')
+def plain_main_page():
+    return render_template('plain/plain.html')
 
 
 @plain.route('/timep/<opt>')
