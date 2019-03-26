@@ -16,8 +16,7 @@ window.onload = function() {
       tbody.innerHTML += itmpl(repo);
     }
 
+    hideElement(document.querySelector("#loader"));
     showElement(document.querySelector("#table"));
   });
-
-  hideElement(document.querySelector("#loader"));
 };
