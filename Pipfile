@@ -11,7 +11,7 @@ flask = "*"
 redis = "*"
 flask-caching = "*"
 requests = "*"
-
+Jinja2 = ">=2.10.1"
 
 [dev-packages]
 
