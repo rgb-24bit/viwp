@@ -52,7 +52,8 @@ class Timep(object):
         return self._build_progress_bar('Month', self.now.day, total)
 
     def for_week(self):
-        return self._build_progress_bar('Week', self.now.weekday() + 1, 7)
+        curr = self.now.weekday() * 24 + self.now.hour
+        return self._build_progress_bar('Week', curr, 24 * 7)
 
     def for_day(self):
         curr = self.now.hour * 60 + self.now.minute
